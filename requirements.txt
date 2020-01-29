@@ -1,4 +1,4 @@
 Flask==1
 waitress==1.4.2
-os
 logging
+dnspython==1.16.0
