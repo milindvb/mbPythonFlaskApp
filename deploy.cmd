@@ -72,7 +72,7 @@ IF DEFINED KUDU_SELECT_PYTHON_VERSION_CMD (
 ) ELSE (
   SET PYTHON_RUNTIME=python-3.6
   SET PYTHON_VER=3.6
-  SET PYTHON_EXE=D:\home\Python364x64\python.exe
+  SET PYTHON_EXE=D:\home\python364x86\python.exe
   SET PYTHON_ENV_MODULE=virtualenv
 )
 
@@ -98,7 +98,7 @@ echo Detected requirements.txt. RUNNING CUSTOM DEPLOYMENT
 
 :: 2. Install packages
 echo Pip install requirements.
-D:\home\Python364x64\python.exe -m pip install --upgrade -r requirements.txt
+D:\home\python364x86\python.exe -m pip install --upgrade -r requirements.txt
 IF !ERRORLEVEL! NEQ 0 goto error
 
 
