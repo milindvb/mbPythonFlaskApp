@@ -29,7 +29,8 @@ if ENABLE_FILE_LOG:
 @app.route("/ad")
 def ad():
     my_resolver = dns.resolver.Resolver()
-    _LOGGER.info("nameserver used: " + my_resolver.nameservers)
+    str1 = ' '.join(my_resolver.nameservers)
+    _LOGGER.info("nameserver used: " + str1)
     try:
         a = my_resolver.query('ent.labgartner.com', "A")
         _LOGGER.info(a)
