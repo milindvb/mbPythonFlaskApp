@@ -33,12 +33,14 @@ def ad():
     _LOGGER.info("nameserver used: " + str1)
     try:
         a = my_resolver.query('ent.labgartner.com', "A")
+        _LOGGER.info("here1")
         _LOGGER.info(a)
         return a.join(str1)
     except Exception  as e:
+        _LOGGER.info("here2")
         _LOGGER.info('didnt resolved.')
         _LOGGER.info(str(e))
-        return str(e)
+        return str(e).join(str1)
 
 @app.route("/")
 def hello():
