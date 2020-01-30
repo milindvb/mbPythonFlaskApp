@@ -2,6 +2,7 @@ from flask import Flask
 import logging
 import os
 from logging.handlers import TimedRotatingFileHandler
+import dns
 import dns.resolver
 
 ENABLE_FILE_LOG = True
