@@ -46,7 +46,10 @@ def ad():
 def hello():
     _LOGGER.debug("printing debug log")
     _LOGGER.info("printing info log")
-    return "Hello World!"
+    r =requests.get('http://www.example.com')
+    return r.text
+    #print(r.text)
+    #return "Hello World!"
 
 if __name__ == "__main__":
     app.run()
