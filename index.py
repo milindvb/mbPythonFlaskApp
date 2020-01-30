@@ -34,7 +34,7 @@ def ad():
     try:
         a = my_resolver.query('ent.labgartner.com', "A")
         _LOGGER.info(a)
-        return a
+        return a.join(str1)
     except Exception  as e:
         _LOGGER.info('didnt resolved.')
         _LOGGER.info(str(e))
