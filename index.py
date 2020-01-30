@@ -4,6 +4,7 @@ import os
 from logging.handlers import TimedRotatingFileHandler
 import dns
 import dns.resolver
+import requests
 
 ENABLE_FILE_LOG = True
 app = Flask(__name__)
