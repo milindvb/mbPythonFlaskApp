@@ -5,3 +5,4 @@ pymsteams==0.1.12
 gunicorn==19.9.0
 waitress==1.4.2
 requests
+socket
