@@ -5,6 +5,7 @@ from logging.handlers import TimedRotatingFileHandler
 import dns
 import dns.resolver
 import requests
+import socket
 
 ENABLE_FILE_LOG = True
 app = Flask(__name__)
@@ -47,10 +48,11 @@ def ad():
 def hello():
     _LOGGER.debug("printing debug log")
     _LOGGER.info("printing info log")
-    r =requests.get('http://www.example.com')
-    return r.text
+    #r =requests.get('http://www.example.com')
+    #return r.text
     #print(r.text)
     #return "Hello World!"
+    return socket.gethostbyname('google.com')
 
 if __name__ == "__main__":
     app.run()
